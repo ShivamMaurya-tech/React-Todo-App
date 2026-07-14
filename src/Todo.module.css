@@ -1,0 +1,313 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Body */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  padding: 20px;
+}
+
+/* Main Container */
+.Todo-List {
+  width: 100%;
+  max-width: 1000px;
+  padding: 35px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(18px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.8s ease;
+}
+
+/* Heading */
+.Todo-List h1,
+h2 {
+  text-align: center;
+  color: white;
+  margin-bottom: 25px;
+  font-size: 54px;
+  letter-spacing: 1px;
+}
+
+/* Input Box */
+.todo-input {
+  width: 100%;
+  padding: 15px 18px;
+  border: none;
+  border-radius: 12px;
+  font-size: 17px;
+  margin-bottom: 18px;
+  outline: none;
+  transition: 0.3s;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.todo-input:focus {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+}
+
+/* Add Button */
+.todo-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  transition: 0.3s;
+  margin-bottom: 20px;
+}
+
+.todo-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 114, 255, 0.4);
+}
+
+/* Todo Item */
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  padding: 15px 18px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.9);
+  transition: 0.3s;
+}
+
+.todo-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.todo-item span {
+  font-size: 17px;
+  color: #333;
+  word-break: break-word;
+}
+/* Button Group */
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Common Button Style */
+.check-btn,
+.delete-btn {
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+/* Complete Button */
+.check-btn {
+  background: linear-gradient(135deg, #00c853, #43a047);
+}
+
+.check-btn:hover {
+  transform: translateY(-3px) scale(1.08);
+  box-shadow: 0 8px 20px rgba(0, 200, 83, 0.4);
+}
+
+/* Delete Button */
+.delete-btn {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+}
+
+.delete-btn:hover {
+  transform: translateY(-3px) scale(1.08);
+  box-shadow: 0 8px 20px rgba(255, 65, 108, 0.4);
+}
+
+/* Icon Size */
+.check-btn svg,
+.delete-btn svg {
+  font-size: 24px;
+}
+
+/* Completed Task */
+.completed {
+  text-decoration: line-through;
+  color: #888;
+  opacity: 0.7;
+}
+/*  not Completed Task */
+.not-completed {
+  text-decoration: none;
+  color: black;
+}
+
+.clear-btn {
+  width: 50%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(40deg, #000b0f, #ff0000);
+  transition: 0.3s;
+  margin-bottom: 20px;
+  margin-left: 25%;
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.clear-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 114, 255, 0.4);
+}
+/* ================= Responsive ================= */
+
+/* Tablets */
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+
+  .Todo-List {
+    padding: 25px 20px;
+  }
+
+  .Todo-List h1,
+  .Todo-List h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  .todo-input,
+  .todo-btn,
+  .clear-btn {
+    font-size: 16px;
+    padding: 14px;
+  }
+
+  .todo-item {
+    padding: 14px;
+  }
+
+  .todo-item span {
+    font-size: 16px;
+  }
+
+  .check-btn,
+  .delete-btn {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .Todo-List {
+    padding: 18px 15px;
+    border-radius: 15px;
+  }
+
+  .Todo-List h1,
+  .Todo-List h2 {
+    font-size: 30px;
+    margin-bottom: 18px;
+  }
+
+  .todo-input {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .todo-btn,
+  .clear-btn {
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .todo-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .todo-item span {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .controls {
+    width: 100%;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  .check-btn,
+  .delete-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .check-btn svg,
+  .delete-btn svg {
+    font-size: 18px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 320px) {
+  .Todo-List h1,
+  .Todo-List h2 {
+    font-size: 24px;
+  }
+
+  .todo-input,
+  .todo-btn,
+  .clear-btn {
+    font-size: 14px;
+  }
+
+  .todo-item span {
+    font-size: 14px;
+  }
+
+  .check-btn,
+  .delete-btn {
+    width: 35px;
+    height: 35px;
+  }
+
+  .check-btn svg,
+  .delete-btn svg {
+    font-size: 16px;
+  }
+}
